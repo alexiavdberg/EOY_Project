@@ -184,6 +184,7 @@ GameObject:
   - component: {fileID: -3460904963702788413}
   - component: {fileID: -6782414721797549672}
   - component: {fileID: -8576812703984085158}
+  - component: {fileID: -8811962365243674726}
   m_Layer: 0
   m_Name: LEFT
   m_TagString: Left
@@ -227,7 +228,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: fcbae822ede140e4ea4553c41a2dfa95, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -332,3 +333,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0439d8a036d9a6e49bcd598bd456248d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &-8811962365243674726
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928363880120742950}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

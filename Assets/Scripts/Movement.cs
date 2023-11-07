@@ -4,35 +4,35 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    [SerializeField] private Vector3 playerPosition;
+    private float speed = 2;
+    private Vector3 direction = new Vector3(1, 0, 0);
 
     private void Start()
     {
-        playerPosition = transform.position;
+        
     }
     private void Update()
     {
-
+        transform.position += direction * speed * Time.deltaTime;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.tag == "Up")
+        if (other.gameObject.CompareTag("Up"))
         {
-            playerPosition.y -= 1;
+            direction = new Vector3(0, 1, 0);
         }
-        if (collision.gameObject.tag == "Left")
+        if (other.gameObject.CompareTag("Left"))
         {
-            playerPosition.y -= 1;
+            direction = new Vector3(-1, 0, 0);
         }
-        if (collision.gameObject.tag == "Down")
+        if (other.gameObject.CompareTag("Right"))
         {
-            playerPosition.y += 1;
+            direction = new Vector3(1, 0, 0);
         }
-        if (collision.gameObject.tag == "Right")
+        if (other.gameObject.CompareTag("Down"))
         {
-            playerPosition.x += 1;
+            direction = new Vector3(0, -1, 0);
         }
-        transform.position = playerPosition;
     }
 }

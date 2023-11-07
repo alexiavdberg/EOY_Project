@@ -9,7 +9,7 @@ public class GridManager : MonoBehaviour
     [SerializeField] private Tile tilePrefab;
     [SerializeField] private Tile tileStart;
     [SerializeField] private Tile tileFinish;
-    [SerializeField] private Tile player;
+    public Tile player;
     [SerializeField] private Transform cam;
     private Tile tile;
 
@@ -37,6 +37,6 @@ public class GridManager : MonoBehaviour
                 }
             }
         }
-        cam.transform.position = new Vector3(width / 2 - 0.5f, height / 2 - 0.5f, -10); // Faire grille de nombre pair pour que ce soit centré, sinon enlever les '-0.5f'
+        // cam.transform.position = new Vector3(width / 2 - 0.5f, height / 2 - 0.5f, -10); // Faire grille de nombre pair pour que ce soit centré, sinon enlever les '-0.5f'
     }
 }
