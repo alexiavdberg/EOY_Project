@@ -9,6 +9,9 @@ TagManager:
   - Up
   - Down
   - Tile
+  - OutOfZone
+  - ToAvoid
+  - ToCatch
   layers:
   - Default
   - TransparentFX
