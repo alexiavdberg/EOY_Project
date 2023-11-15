@@ -8,7 +8,6 @@ TagManager:
   - Right
   - Up
   - Down
-  - Tile
   - OutOfZone
   - ToAvoid
   - ToCatch

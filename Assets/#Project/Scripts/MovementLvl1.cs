@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Movement : MonoBehaviour
+public class MovementLvl1 : MonoBehaviour
 {
     [SerializeField] private float speed = 3;
     private Vector3 direction = new Vector3(1, 0, 0);
-    [SerializeField] private bool isStarting;
+    [SerializeField] public bool isStarting;
 
     private void Start()
     {
@@ -22,7 +22,6 @@ public class Movement : MonoBehaviour
     }
     public void StartLevel()
     {
-        Debug.Log("CLICK");
         isStarting = true;
     }
     void OnTriggerEnter2D(Collider2D other)
@@ -43,17 +42,21 @@ public class Movement : MonoBehaviour
         {
             direction = new Vector3(0, -1, 0);
         }
-        transform.position = new Vector3(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.y));
+
+        if (other.gameObject.CompareTag("Finish"))
+        {
+            SceneManager.LoadSceneAsync("CongratulationsLvl1");
+        }
 
         if (other.gameObject.CompareTag("OutOfZone"))
         {
-            Debug.Log("OUT OF ZONE");
             SceneManager.LoadSceneAsync("OutOfZoneLvl1");
         }
-        // if (other.gameObject.CompareTag("ToAvoid"))
-        // {
-        //     Debug.Log("Foncé dans ennemi");
-        //     SceneManager.LoadSceneAsync("CrushedInEnemy");
-        // }
+
+        if (other.gameObject.CompareTag("ToAvoid"))
+        {
+            SceneManager.LoadSceneAsync("CrushedInEnemyLvl1");
+        }
+        transform.position = new Vector3(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.y));
     }
 }

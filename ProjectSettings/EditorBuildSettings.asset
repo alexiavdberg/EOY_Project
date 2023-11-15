@@ -12,17 +12,38 @@ EditorBuildSettings:
     path: Assets/#Project/Scenes/Level1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/#Project/Scenes/Level2.unity
-    guid: 0be762c0affa5994ab3076526a12ac35
-  - enabled: 1
-    path: Assets/#Project/Scenes/Level3.unity
-    guid: 4e73ee772d2978045b392c2c7126cc99
+    path: Assets/#Project/Scenes/CongratulationsLvl1.unity
+    guid: f23fcccc6bf88db4da8b4a08009e3b1c
   - enabled: 1
     path: Assets/#Project/Scenes/OutOfZoneLvl1.unity
     guid: 6a57b2bded98f1247a29521b5839e1c9
   - enabled: 1
-    path: Assets/#Project/Scenes/CrushedInEnemy.unity
+    path: Assets/#Project/Scenes/CrushedInEnemyLvl1.unity
     guid: d78427457c79c874a9799f57a66ac14d
+  - enabled: 1
+    path: Assets/#Project/Scenes/Level2.unity
+    guid: 0be762c0affa5994ab3076526a12ac35
+  - enabled: 1
+    path: Assets/#Project/Scenes/CongratulationsLvl2.unity
+    guid: 1c1390856e338c245b090f33026a9782
+  - enabled: 1
+    path: Assets/#Project/Scenes/OutOfZoneLvl2.unity
+    guid: 0f377fe229d37994e95a4d8b8fc1e00d
+  - enabled: 1
+    path: Assets/#Project/Scenes/CrushedInEnemyLvl2.unity
+    guid: 2652763841fe17545bd4661040517d01
+  - enabled: 1
+    path: Assets/#Project/Scenes/Level3.unity
+    guid: 4e73ee772d2978045b392c2c7126cc99
+  - enabled: 1
+    path: Assets/#Project/Scenes/CongratulationsLvl3.unity
+    guid: beb5d78b7f173f04c966214c04833aa5
+  - enabled: 1
+    path: Assets/#Project/Scenes/OutOfZoneLvl3.unity
+    guid: 2fcc5c91849563740b17d84cad6b4363
+  - enabled: 1
+    path: Assets/#Project/Scenes/CrushedInEnemyLvl3.unity
+    guid: edf64dcc7ba3d434ea094319870f01c7
   - enabled: 1
     path: Assets/#Project/Scenes/EndGame.unity
     guid: a5a0eca4ac18a13489993a9b83893fa1

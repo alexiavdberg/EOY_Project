@@ -29,7 +29,7 @@ public class GridManager : MonoBehaviour
                 if (tile.name == "tile 0, 0")
                 {
                     tile = Instantiate(tileStart, new Vector3(x, y, 0), Quaternion.identity);
-                    tile = Instantiate(player, new Vector3(x, y, 0), Quaternion.identity);
+                    // tile = Instantiate(player, new Vector3(x, y, 0), Quaternion.identity);
                 }
                 if (tile.name == $"tile {width - 1}, {height - 1}")
                 {
