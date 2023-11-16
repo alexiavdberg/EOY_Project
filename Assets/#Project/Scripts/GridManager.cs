@@ -10,7 +10,7 @@ public class GridManager : MonoBehaviour
     [SerializeField] private Tile tileStart;
     [SerializeField] private Tile tileFinish;
     public Tile player;
-    [SerializeField] private Transform cam;
+    private Transform cam;
     private Tile tile;
 
     private void Start()
