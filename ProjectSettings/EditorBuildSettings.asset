@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/#Project/Scenes/CrushedInEnemyLvl1.unity
     guid: d78427457c79c874a9799f57a66ac14d
   - enabled: 1
+    path: Assets/#Project/Scenes/TryAgainLvl1.unity
+    guid: 6b68490eacd50574995291c456d9ac3f
+  - enabled: 1
     path: Assets/#Project/Scenes/Level2.unity
     guid: 0be762c0affa5994ab3076526a12ac35
   - enabled: 1
@@ -36,6 +39,9 @@ EditorBuildSettings:
     path: Assets/#Project/Scenes/CrushedInEnemyLvl2.unity
     guid: 2652763841fe17545bd4661040517d01
   - enabled: 1
+    path: Assets/#Project/Scenes/TryAgainLvl2.unity
+    guid: 2115271817c3be14c80f4e117c9031ea
+  - enabled: 1
     path: Assets/#Project/Scenes/Level3.unity
     guid: 4e73ee772d2978045b392c2c7126cc99
   - enabled: 1
@@ -47,6 +53,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/#Project/Scenes/CrushedInEnemyLvl3.unity
     guid: edf64dcc7ba3d434ea094319870f01c7
+  - enabled: 1
+    path: Assets/#Project/Scenes/TryAgainLvl3.unity
+    guid: 4df8a78192e3270439d23c12a08955e6
   - enabled: 1
     path: Assets/#Project/Scenes/EndGame.unity
     guid: a5a0eca4ac18a13489993a9b83893fa1
