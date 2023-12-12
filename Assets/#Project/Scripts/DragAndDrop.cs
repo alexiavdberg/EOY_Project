@@ -37,6 +37,7 @@ public class DragAndDrop : MonoBehaviour
             {
                 initPosMouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 initPosObject = transform.position;
+                SoundManager.Instance.PlayEffect("clickArrow");
             }
             isDragged = true;
         }
@@ -45,5 +46,6 @@ public class DragAndDrop : MonoBehaviour
     private void OnMouseUp()
     {
         isDragged = false;
+        SoundManager.Instance.PlayEffect("clickArrowRelease");
     }
 }

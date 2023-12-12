@@ -26,53 +26,71 @@ public class SceneManagement : MonoBehaviour
     public void MainMenu()
     {
         LoadNextLevel("MainMenu");
+        SoundManager.Instance.PlayEffect("button");
     }
     public void PlayLevelOne()
     {
         LoadNextLevel("Level1");
+        SoundManager.Instance.PlayEffect("button");
     }
     public void PlayLevelTwo()
     {
         LoadNextLevel("Level2");
+        SoundManager.Instance.PlayEffect("button");
     }
     public void PlayLevelThree()
     {
         LoadNextLevel("Level3");
+        SoundManager.Instance.PlayEffect("button");
     }
     public void RestartScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SoundManager.Instance.PlayEffect("button");
     }
     public void EndGame()
     {
         LoadNextLevel("EndGame");
+        SoundManager.Instance.PlayEffect("button");
     }
     public void CrushedInEnemyLvl1()
     {
         LoadNextLevel("CrushedInEnemyLvl1");
+        SoundManager.Instance.PlayEffect("button");
     }
     public void CrushedInEnemyLvl2()
     {
         LoadNextLevel("CrushedInEnemyLvl2");
+        SoundManager.Instance.PlayEffect("button");
     }
     public void CrushedInEnemyLvl3()
     {
         LoadNextLevel("CrushedInEnemyLvl3");
+        SoundManager.Instance.PlayEffect("button");
     }
     public void OutOfZoneLvl1()
     {
         LoadNextLevel("OutOfZoneLvl1");
+        SoundManager.Instance.PlayEffect("button");
     }
     public void OutOfZoneLvl2()
     {
         LoadNextLevel("OutOfZoneLvl2");
+        SoundManager.Instance.PlayEffect("button");
     }
     public void OutOfZoneLvl3()
     {
         LoadNextLevel("OutOfZoneLvl3");
+        SoundManager.Instance.PlayEffect("button");
     }
     public void ChooseLevel()
     {
         LoadNextLevel("ChooseLevel");
+        SoundManager.Instance.PlayEffect("button");
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
+        SoundManager.Instance.PlayEffect("button");
     }
 }
