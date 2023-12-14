@@ -43,6 +43,10 @@ public class DragAndDrop : MonoBehaviour
                 isOverValidTarget = true;
                 break;
             }
+            if (collider.CompareTag("NoArrow") || collider.CompareTag("Finish"))
+            {
+                transform.position = initialPosition;
+            }
         }
 
         // Si l'objet n'est pas au-dessus d'une cible valide, retournez à la position initiale
