@@ -15,7 +15,6 @@ public class MovementLvl2 : MonoBehaviour
     {
         isStarting = false;
         speed = 3f;
-        direction = new Vector3(1, 0, 0);
         playerAnimator = gameObject.GetComponent<Animator>();
         cherries = 6f;
     }
@@ -29,30 +28,31 @@ public class MovementLvl2 : MonoBehaviour
     public void StartLevel()
     {
         isStarting = true;
+        direction = new Vector3(1, 0, 0);
         playerAnimator.SetTrigger("goRight");
         SoundManager.Instance.PlayEffect("button");
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Up"))
+        if (other.gameObject.CompareTag("Up") && isStarting)
         {
             direction = new Vector3(0, 1, 0);
             playerAnimator.SetTrigger("goUp");
             SoundManager.Instance.PlayEffect("changeDirection");
         }
-        if (other.gameObject.CompareTag("Left"))
+        if (other.gameObject.CompareTag("Left") && isStarting)
         {
             direction = new Vector3(-1, 0, 0);
             playerAnimator.SetTrigger("goLeft");
             SoundManager.Instance.PlayEffect("changeDirection");
         }
-        if (other.gameObject.CompareTag("Right"))
+        if (other.gameObject.CompareTag("Right") && isStarting)
         {
             direction = new Vector3(1, 0, 0);
             playerAnimator.SetTrigger("goRight");
             SoundManager.Instance.PlayEffect("changeDirection");
         }
-        if (other.gameObject.CompareTag("Down"))
+        if (other.gameObject.CompareTag("Down") && isStarting)
         {
             direction = new Vector3(0, -1, 0);
             playerAnimator.SetTrigger("goDown");

@@ -21,10 +21,9 @@ public class SceneManagement : MonoBehaviour
 
         SceneManager.LoadScene(scene);
     }
-
-
     public void MainMenu()
     {
+        SoundManager.Instance.PlayMusic("MenuTheme");
         LoadNextLevel("MainMenu");
         SoundManager.Instance.PlayEffect("button");
     }
@@ -32,6 +31,7 @@ public class SceneManagement : MonoBehaviour
     {
         LoadNextLevel("Level1");
         SoundManager.Instance.PlayEffect("button");
+        SoundManager.Instance.PlayMusic("Theme");
     }
     public void PlayLevelTwo()
     {
@@ -87,6 +87,7 @@ public class SceneManagement : MonoBehaviour
     {
         LoadNextLevel("ChooseLevel");
         SoundManager.Instance.PlayEffect("button");
+        SoundManager.Instance.PlayMusic("Theme");
     }
     public void QuitGame()
     {

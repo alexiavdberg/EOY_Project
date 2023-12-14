@@ -1,51 +1,54 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DragAndDrop : MonoBehaviour
 {
-    [SerializeField] private bool isDragged = false;
-    [SerializeField] private bool isDraggable = true;
-    [SerializeField] private bool smartDrag = true;
-    [SerializeField] private bool snapToGrid = true;
-    Vector2 initPosMouse, initPosObject;
+    private Vector3 initialPosition;
+    private bool isBeingDragged = false;
 
-    private void Update()
+    void Start()
     {
-        if (isDragged)
+        initialPosition = transform.position;
+    }
+
+    void Update()
+    {
+        if (isBeingDragged)
         {
-            if (!smartDrag)
-            {
-                gameObject.transform.position = (Vector2) Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            }
-            else
-            {
-                transform.position = initPosObject + (Vector2) Camera.main.ScreenToWorldPoint(Input.mousePosition) - initPosMouse;
-            }
-            if (snapToGrid)
-            {
-                transform.position = new Vector2(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.y));
-            }
+            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mousePosition.z = 0f; // Assurez-vous que la position Z reste constante
+            transform.position = mousePosition;
+
+            transform.position = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), 0f);
         }
     }
 
-    private void OnMouseOver()
+    void OnMouseDown()
     {
-        if (isDraggable && Input.GetMouseButtonDown(0))
-        {
-            if (smartDrag)
-            {
-                initPosMouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                initPosObject = transform.position;
-                SoundManager.Instance.PlayEffect("clickArrow");
-            }
-            isDragged = true;
-        }
+        isBeingDragged = true;
     }
 
-    private void OnMouseUp()
+    void OnMouseUp()
     {
-        isDragged = false;
-        SoundManager.Instance.PlayEffect("clickArrowRelease");
+        isBeingDragged = false;
+
+        // Vérifier s'il y a un collider avec un tag spécifique sous l'objet
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.1f);
+
+        bool isOverValidTarget = false;
+
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.CompareTag("Tile"))
+            {
+                isOverValidTarget = true;
+                break;
+            }
+        }
+
+        // Si l'objet n'est pas au-dessus d'une cible valide, retournez à la position initiale
+        if (!isOverValidTarget)
+        {
+            transform.position = initialPosition;
+        }
     }
 }

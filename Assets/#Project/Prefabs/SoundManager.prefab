@@ -177,6 +177,8 @@ MonoBehaviour:
   musicSounds:
   - name: Theme
     clip: {fileID: 8300000, guid: ff0baed616eeba549a06bf00c6807938, type: 3}
+  - name: MenuTheme
+    clip: {fileID: 8300000, guid: 46bec8b3b3080c34cb447b7f58523a7a, type: 3}
   effectSounds:
   - name: grabCherry
     clip: {fileID: 8300000, guid: b55d5639b32a1be48be9a16a6ca418a0, type: 3}

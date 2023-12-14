@@ -23,9 +23,9 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    private void Start()
+    void Start()
     {
-        PlayMusic("Theme");
+        SoundManager.Instance.PlayMusic("MenuTheme");
     }
 
     public void PlayMusic(string name)
